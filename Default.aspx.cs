@@ -100,7 +100,6 @@ public partial class _Default : System.Web.UI.Page
                 rollback.Visible = false;
                 break;
         }
-
     }
 
     protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,7 +121,6 @@ public partial class _Default : System.Web.UI.Page
         if (DropDownList2.SelectedItem != null)
         {
             Image1.ImageUrl = "images/" + DropDownList1.SelectedItem.Text + DropDownList2.SelectedItem.Text + ".jpg";
-            //Image1.Style.Add("display", "block");
             imagediv.Style.Add("display", "block");
         }
         else
