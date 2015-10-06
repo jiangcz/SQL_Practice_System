@@ -242,8 +242,6 @@ public partial class _Default : System.Web.UI.Page
             
             case "PostgreSQL":
                 string ps = "Server=127.0.0.1;Port=5432;Database=template1;User Id=postgres; Password=***;Pooling=false;";
-                //string ps = "Server=127.0.0.1;Port=5432;Database=" + DropDownList2.SelectedItem.Text + ";User Id=postgres; Password=Password2014;Pooling=false;";
-                //string drop = "DROP DATABASE IF EXISTS" + User.Identity + DropDownList2.SelectedItem.Text;
                 try
                 {
                     using (NpgsqlConnection conn = new NpgsqlConnection(ps))
@@ -331,13 +329,7 @@ public partial class _Default : System.Web.UI.Page
                     Button1.Enabled = false;
                     TextBox1.Attributes.Add("readonly", "true");
                     SqlConnection(" rollback");
-                    //if (GridView1.Rows.Count > 0)
-                    //{
-                        //commit.Enabled = true;
-                        //rollback.Enabled = true;
-                        //Button1.Enabled = false;
-                        //TextBox1.Attributes.Add("readonly", "true");
-                    //}
+
                 }
                 else
                 {
@@ -486,12 +478,6 @@ public partial class _Default : System.Web.UI.Page
                             if (numberOfRecords > 0)
                             {
                                 msg.Text = "Result: " + numberOfRecords + " row(s) affected.";
-                                //DataTable dt = new DataTable();
-                                //using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                                //{
-                                //    adapter.Fill(dt);
-                                //}
-                                //GridView1.DataSource = dt;
                             }
 
                             else
